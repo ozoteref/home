@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        var txt = prompt("ingresa un texto: ");
+        var newtxt = txt.replace(/ /g, "");
+        var cadenaInvertida = "";
+        
+        for(var i=newtxt.length; i>=0; i--){
+            cadenaInvertida = cadenaInvertida + newtxt.charAt(i);
+        }
+
+        console.log(newtxt);
+        console.log(cadenaInvertida);
+
+            if(newtxt == cadenaInvertida){
+                alert("Es un palindromo");
+            }
+            else{
+                alert("No es palindromo")
+            }
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

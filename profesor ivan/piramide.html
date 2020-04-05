@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        c();
+
+        function a(){
+            let salida = "";
+        let tam = 5;
+
+        for(i=1; i<=tam; i++){
+            for(j=1; j<=i; j++){
+                salida += "*";
+            }
+            salida += "</br>";
+        }
+
+        document.write(salida);
+        }
+
+        function b(){
+            let salida = "";
+        let tam = 5;
+
+        for(i=1; i<=tam; i++){
+            for(j=tam; j>=i; j--){
+                salida += "*";
+            }
+            salida += "</br>";
+        }
+
+        document.write(salida);
+        }
+
+        function c(){
+            let salida = "";
+            let tam = 5;
+
+        for(i=1; i<=tam; i++){
+            for(j=1; j<i; j++){
+                document.write("&nbsp"+"&nbsp");
+            }
+
+            for(j=1; j<=i; j++){
+                document.write("*");
+            }
+            document.write("</br>");
+        }
+
+        
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

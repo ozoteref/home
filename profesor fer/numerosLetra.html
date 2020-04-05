@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        numlet();
+        function numlet(){
+            txt = 5;
+            vector1 = new Array();
+            resultado = 0;
+            
+
+            for(var i=0; i<txt; i++){
+                vector1[i] = parseInt(prompt("Ingresa el valor: "+i)); 
+                 if(Number(vector1[i])){
+                    resultado = resultado+vector1[i];
+                 }else{
+                     alert("Ingresa solamente numeros");
+                     i--;
+                 }   
+            }
+            alert("la suma es: "+resultado);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

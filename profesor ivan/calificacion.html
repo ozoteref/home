@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+        function promedio(arr){
+            
+            let resultado = 0;
+            
+            for(var i=0; i<arr.length; i++){
+                resultado += arr[i];
+            }
+
+            resultado = resultado/arr.length;
+            
+            return resultado;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let arr = [10,9,10,8,7];
+        document.write("Conjunto: "+arr+"<br>");
+        document.write("Promedio: "+promedio(arr)+"<br>");
+        arrB=sort(arr);
+        document.write("Conjunto: "+arrB+"<br>");
+        document.write("Mediana"+mediana(arr)+"<br>");
+    </script>
+</body>
+</html>

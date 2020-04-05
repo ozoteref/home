@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var cantidadventas = prompt("Captura cuantas venta fueron: ");
+        vector1 = new Array(cantidadventas);
+        resultado = 0;
+            
+            for(var i=0; i<cantidadventas; i++){
+                vector1[i] = parseInt(prompt("Ingresa el valor: "+i)); 
+                 if(Number(vector1[i])){
+                    resultado = resultado+vector1[i];
+                    
+                    if(vector1[i]<1000){
+                        document.write("</br>venta menor a mil: "+vector1[i]);
+                    }
+                    else if(vector1[i]>1000 && vector1[i]>5000){
+                        document.write("</br>venta mayor a mil y cincomil: "+vector1[i]);
+                    }
+                    else if(vector1[i]<5000){
+                        document.write("</br>venta menores a cincomil: "+vector1[i]);
+                    }
+
+                 }else{
+                     alert("Ingresa solamente numeros");
+                     i--;
+                 }   
+            }
+
+
+            alert("la suma es: "+resultado);
+
+            
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

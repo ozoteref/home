@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+        //vectorSuma();
+        //vectorResta();
+        vectorMult();
+        //vectorModulo();
+
+        function vectorSuma(){
+            var txt; 
+            vector1 = new Array(txt); 
+            vector2 = new Array(txt); 
+            vectorR = new Array(txt);
+
+            txt = parseInt(prompt("Ingresa el tamaño del vector"));
+
+            for(var i=0; i<txt; i++){
+                vector1[i] = parseInt(prompt("Ingresa el valor del primer vector")); 
+            }
+
+            for(var i=0; i<txt; i++){
+                vector2[i] = parseInt(prompt("Ingresa el valor del segundo vector")); 
+            }
+
+            for(var i=0; i<txt; i++){
+                vectorR[i] = vector1[i] + vector2[i]; 
+            }
+
+           document.getElementById('content').innerHTML = ("<p> primer vector ("+vector1+") <br>"
+                  +"Segundo vector ("+vector2+") <br>"
+                  +"Resultado de la suma de los vectores ("+vectorR+") </p>");
+        }
+
+        function vectorResta(){
+            var txt; 
+            vector1 = new Array(txt); 
+            vector2 = new Array(txt); 
+            vectorR = new Array(txt);
+
+            txt = parseInt(prompt("Ingresa el tamaño del vector"));
+
+            for(var i=0; i<txt; i++){
+                vector1[i] = parseInt(prompt("Ingresa el valor del primer vector")); 
+            }
+
+            for(var i=0; i<txt; i++){
+                vector2[i] = parseInt(prompt("Ingresa el valor del segundo vector")); 
+            }
+
+            for(var i=0; i<txt; i++){
+                vectorR[i] = vector1[i] - vector2[i]; 
+            }
+
+           document.getElementById('content').innerHTML = ("<p> primer vector ("+vector1+") <br>"
+                  +"Segundo vector ("+vector2+") <br>"
+                  +"Resultado de la resta de los vectores ("+vectorR+") </p>");
+        }
+
+        function vectorMult(){
+            var txt; 
+            vector1 = new Array(txt); 
+            vector2 = new Array(txt); 
+            vectorR = new Array(txt);
+
+            txt = parseInt(prompt("Ingresa el tamaño del vector"));
+
+            for(var i=0; i<txt; i++){
+                vector1[i] = parseInt(prompt("Ingresa el valor del primer vector")); 
+            }
+
+            for(var i=0; i<txt; i++){
+                vector2[i] = parseInt(prompt("Ingresa el valor del segundo vector")); 
+            }
+
+            for(var i=0; i<txt; i++){
+                vectorR[i] = vector1[i] * vector2[i]; 
+            }
+
+           document.getElementById('content').innerHTML = ("<p> primer vector ("+vector1+") <br>"
+                  +"Segundo vector ("+vector2+") <br>"
+                  +"Resultado de la multiplicacion de los vectores ("+vectorR+") </p>");
+        }
+
+        function vectorModulo(){
+            var txt;
+            var modulo; 
+            vector1 = new Array(txt);  
+
+            txt = parseInt(prompt("Ingresa el tamaño del vector"));
+
+            for(var i=0; i<txt; i++){
+                vector1[i] = parseInt(prompt("Ingresa el valor del primer vector")); 
+            }
+
+                modulo= Math.sqrt(Math.pow(vector1[0],2) + Math.pow(vector1[1],2)); 
+
+           document.getElementById('content').innerHTML = ("<p> primer vector ("+vector1+") <br>"
+                  +"Resultado del modulo ("+modulo+") </p>");
+        }
+    });
+    </script>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+</body>
+</html>

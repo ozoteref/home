@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        var valores=[1,-2,3,-1,5];
+        var numnegativos = [];
+        var resultado = 0;
+        var resultadoPos = 1;
+
+        for(var i=0; i<valores.length; i++){
+            if(valores[i]<0){
+                resultado = valores[i]*2;
+                numnegativos.push(resultado);
+            }else{
+                console.log(valores[i]);
+                resultadoPos = valores[i]*resultadoPos;
+            }
+        }
+
+        document.write(numnegativos+"<br>");
+        document.write(resultadoPos);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

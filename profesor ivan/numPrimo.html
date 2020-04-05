@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function esprimo(n){
+            var primo;
+            primo=true;
+
+            if(n==1){
+                primo=false;
+            }
+
+            for(var i=2; i<n-1; i++){
+                if(n%i==0){
+                    primo=false;
+                }
+            }
+            return primo;
+        }
+
+        var num = prompt("Ingresa un valor para identificar si es primo: ");
+
+        if(esprimo(num)){
+            alert("Es un numero primo");
+        }else{
+            alert("No es un numero primo");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

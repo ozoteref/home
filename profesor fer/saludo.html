@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //longitud()
+        boolean()
+        //operaciones();
+
+        function longitud(){
+            var valores = ["bienvenido", 3, false, "hasta luego", true, 7];
+            if(valores[3].length>valores[0].length){
+                alert("-"+valores[3]+"- tiene una mayor longitud");
+            }else{
+                alert("-"+valores[0]+"- tiene una mayor longitud");
+            }
+        }
+
+        function boolean(){
+            var valores = ["bienvenido", 3, false, "hasta luego", true, 7];
+            if(valores[2]==false && valores[4]==true){
+                alert("el resultado es verdadero");
+            }else{
+                alert("el resultado es falso");
+            }
+        }
+        
+        function operaciones(){
+            var valores = ["bienvenido", 3, false, "hasta luego", true, 7];
+            var opcion = prompt("ingresa una opcion s->suma :");
+            var res;
+
+            switch(opcion){
+                case "s":
+                res=valores[1]+valores[5];
+                alert("El resultado es: "+res);
+                break;
+
+                case "r":
+                res=valores[1]-valores[5];
+                alert("El resultado es: "+res);
+                break;
+
+                case "m":
+                res=valores[1]*valores[5];
+                alert("El resultado es: "+res);
+                break;
+
+                case "d":
+                res=valores[1]/valores[5];
+                alert("El resultado es: "+res);
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

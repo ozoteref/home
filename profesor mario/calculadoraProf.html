@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <label for="fname">Valor a:</label>
+  <input type="number" id="valor_a" name="valor_a"/>  
+  <br>
+  <label for="fname">Valor b:</label>
+  <input type="number" id="valor_b" name="valor_b">  
+  <br>
+  <br>
+  <button type="button" onclick="limpiarFunction()">Limpiar</button>  
+  <button type="button" onclick="sumarFunction()">Sumar (+)</button>  
+  <button type="button" onclick="restarFunction()">Restar (-)</button>  
+  <button type="button" onclick="multiplicarFunction()">Multiplicar (*)</button>  
+  <button type="button" onclick="dividirFunction()">Dividir (/)</button>  
+  <br>
+  <label for="fname">Resultado</label>
+  <input type="number" id="resultado" name="resultado">  
+  <br>
+  <button type="button" onclick="mostrarJSON()">Mostrar Objeto</button>  
+
+<script> 
+
+  class CalculadoraUsandoClass
+  {
+    constructor()
+    {
+      //Variables que estaran disponibles en el scope global
+      //de la clase
+      this.valor_a = 0;
+      this.valor_b = 0;
+      this.resultado = 0;
+      console.log("Se genero la instancia de CalculadoraUsandoClass");
+    }//constructor
+
+    //=================================================//
+    /**
+    * Metodo para definir los valores de la clase
+    *
+    * @param Integer valor_a Primer valor.
+    * @param Integer valor_b Segundo valor.
+    *
+    * @return void.
+    */
+    setValores(valor_a, valor_b)
+    {
+      if (isNaN(valor_a)){
+        console.log(`El valor_a no fue asignado por no ser númerico, el valor permanece con el valor previo => ${this.valor_a}`);      
+      }else{
+        this.valor_a = valor_a;
+        console.log(`El valor_a es => ${this.valor_a}`);
+      }
+
+      if (isNaN(valor_b)){
+        console.log(`El valor_b no fue asignado por no se númerico, el valor permanece con el valor previo => ${this.valor_b}`);      
+      }else{
+        this.valor_b = valor_b;
+        console.log(`El valor_b es => ${this.valor_b}`);
+      }
+
+      this.resultado = "";
+
+    }//setValores
+
+    sumarValores()
+    {
+      this.resultado = parseFloat(this.valor_a) + parseFloat(this.valor_b) ;
+      console.log(`Operación Suma`);
+      console.log(`El valor de resultado es => ${this.resultado}`);
+      return this.resultado ;
+    }//sumarValores
+
+    restarValores()
+    {
+      this.resultado = parseFloat(this.valor_a) - parseFloat(this.valor_b) ;
+      console.log(`Operación Resta`);  
+      console.log(`El valor de resultado es => ${this.resultado}`);
+      return this.resultado ;
+    }//restarValores
+
+    multiplicarValores()
+    {
+      this.resultado = parseFloat(this.valor_a) * parseFloat(this.valor_b) ;
+      console.log(`Operación Multiplicación`);    
+      console.log(`El valor de resultado es => ${this.resultado}`);
+      return this.resultado ;
+    }//multiplicarValores
+
+    dividirValores()
+    {
+      if (parseFloat(this.valor_b)==0){
+        this.resultado ="";
+        console.log(`Operación División`);        
+        console.log(`El resultado es indeterminado ya que el divisor es cero `);
+        window.alert(`El resultado es indeterminado ya que el divisor es cero `);
+        return "";
+      } else {
+        this.resultado = parseFloat(this.valor_a) / parseFloat(this.valor_b) ;
+        console.log(`Operación División`);        
+        console.log(`El valor de resultado es => ${this.resultado}`);
+        return this.resultado ;
+      }
+    }//dividirValores
+
+    generaJSON(){
+      return JSON.stringify(this);
+    }
+
+    
+  }//CalculadoraUsandoClass
+
+  //========== Instanciando nuestro Objeto ==========//
+  /**
+  * Instancia de la clase CalculadoraUsandoClass.
+  *
+  * @type CalculadoraUsandoClass.
+  */
+  const CALCULADORA_USANDO_CLASS = new CalculadoraUsandoClass();
+
+  function mostrarJSON(){
+    console.log("JSON", CALCULADORA_USANDO_CLASS.generaJSON());
+  }
+
+  function limpiarFunction() {
+    document.getElementById("valor_a").value = "";
+    document.getElementById("valor_b").value = "";
+    document.getElementById("resultado").value = "";
+    CALCULADORA_USANDO_CLASS.setValores(0, 0);  
+  }
+
+
+  function sumarFunction() {
+    CALCULADORA_USANDO_CLASS.setValores(document.getElementById("valor_a").value, document.getElementById("valor_b").value);
+    document.getElementById("resultado").value = CALCULADORA_USANDO_CLASS.sumarValores();
+  }
+
+  function restarFunction() {
+    CALCULADORA_USANDO_CLASS.setValores(document.getElementById("valor_a").value, document.getElementById("valor_b").value);
+    document.getElementById("resultado").value = CALCULADORA_USANDO_CLASS.restarValores();
+  }
+
+  function multiplicarFunction() {
+    CALCULADORA_USANDO_CLASS.setValores(document.getElementById("valor_a").value, document.getElementById("valor_b").value);
+    document.getElementById("resultado").value = CALCULADORA_USANDO_CLASS.multiplicarValores();
+  }
+
+  function dividirFunction() {
+    CALCULADORA_USANDO_CLASS.setValores(document.getElementById("valor_a").value, document.getElementById("valor_b").value);
+    document.getElementById("resultado").value = CALCULADORA_USANDO_CLASS.dividirValores();
+  }
+
+</script>  
+
+
+
+</body>
+</html>

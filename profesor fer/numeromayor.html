@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        mayor();
+        function mayor(){
+            var txt=""; 
+             
+            txt = parseInt(prompt("Ingresa la cantidad de numeros a evaluar: "));
+
+            vector1 = new Array(txt);
+            vector2 = new Array();
+
+            for(var i=0; i<txt; i++){
+                vector1[i] = parseInt(prompt("Ingresa el valor: ")); 
+                if(vector1[i]>5){
+                    vector2.push(vector1[i]);
+                }
+
+                    document.write("</br>Valor ["+i+"] = "+ vector1[i]);
+
+            }
+
+            document.write("<br><br>existen "+vector2.length+" valores mayores a 5");
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

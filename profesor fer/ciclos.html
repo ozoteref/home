@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //ciclo()
+        //calificacion();
+        cadena();
+
+        function cadena(){
+            var txt = "";
+            var resultado = "";
+
+            do{
+                txt = prompt("Ingresa un texto: ");
+                resultado = resultado+"-"+txt;
+
+            }while(confirm("Desea seguir"));
+
+            alert(resultado);
+        }
+
+
+        function calificacion() {
+            var calif = prompt("Ingresa tu calificacion: ");
+            var califnum = Number(calif)
+
+            if (Number(califnum)) {
+                if (califnum <= 2) {
+                    alert("Muy deficiente");
+                }
+                else if (califnum <= 4) {
+                    alert("Insuficiente");
+                }
+                else if (califnum == 5) {
+                    alert("Suficiente");
+                }
+                else if (califnum == 6) {
+                    alert("Bien");
+                }
+                else if (califnum <= 8) {
+                    alert("Notable");
+                }
+                else if (califnum <= 10) {
+                    alert("Sobresaliente");
+                }
+            } else {
+                alert("no es numero");
+            }
+        }
+
+
+        function ciclo() {
+            var edad = prompt("Ingreda tu edad: ");
+            var edadnum = Number(edad);
+
+            if (Number(edadnum)) {
+                while (edadnum >= 18) {
+                    alert("Ya puede conducir");
+                }
+                alert("No tienes la edad necesaria para conducir");
+            } else {
+                alert("No es numero");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

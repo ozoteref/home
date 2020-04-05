@@ -1,0 +1,56 @@
+.card-first{
+    width: 33.3%;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.card-first .card-first-imagen{
+    position: relative;
+}
+
+.card-first .card-first-imagen img{
+    width: 100%;
+    height: auto;
+    border-radius: 1em 1em 0em 0em;
+}
+
+.card-first .card-first-content{
+    font-family: "Simonetta";
+    background: rgba(94, 91, 91, 0.418);
+    color: #000;
+    padding: 10px;
+    border-radius: 0em 0em 1em 1em;
+    margin-top: -4px;
+}
+
+.card-first .card-first-content h2{
+    font-size: 25px;
+    text-align: center;
+}
+
+.card-first .card-first-content p{
+    font-size: 16px;
+    text-align: left;
+    padding: 5px;
+}
+
+.card-first .card-first-content time{
+    font-size: 11px;
+    padding: 5px;
+}
+
+.card-first .card-first-imagen .icon i{
+    background-color: rgb(107, 171, 207);
+    color: rgb(1, 1, 10);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    bottom: -20px;
+}
+
+.clear-float{
+    clear: both;
+}

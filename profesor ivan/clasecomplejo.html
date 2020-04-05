@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        class Complejo{
+            constructor(re, im){
+                this.re = re;
+                this.im = im;
+            }
+
+            toString(){
+                return this.re + (this.im >= 0 ? '+': '')+this.im+'i <br>';
+            }
+
+            sumar(c1,c2){
+                let r=c1.re+c2.re;
+                let i=c1.im+c2.im;
+                let c3 = new Complejo(r,i);
+                return c3;
+
+            }
+
+            resta(c1,c2){
+                let r=c1.re-c2.re;
+                let i=c1.im-c2.im;
+                let c3 = new Complejo(r,i);
+                return c3;
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var c1 = new Complejo(3,-4);
+        var c2 = new Complejo(7,5);
+        document.write("Valor de c1: "+c1.toString());
+        document.write("Valor de c2: "+c2.toString());
+
+        document.write("<br> Resultado de la suma: "+c1.sumar(c1,c2).toString());
+        document.write("<br> Resultado de la resta: "+c1.resta(c1,c2));
+    </script>
+</body>
+</html>

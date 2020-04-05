@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clase Persona</title>
+    <script>
+        class persona{
+            constructor(nombre, apellidoP, apellidoM){
+                this.nombre=nombre;
+                this.apellidoP=apellidoP;
+                this.apellidoM=apellidoM;
+                this.sexo;
+                this.fechaNacimiento;
+                this.nacionalidad;
+                this.domicilio;
+                //calle,numero,numero interior, colonia, cp, ciudad, estado, pais
+                this.email;
+                this.telefono;
+                //tipo, numero
+            }
+
+            toString(){
+                return 'me llamo: ' + this.nombre + ' ' + this.apellidoP + ' ' + this.apellidoM; 
+            }
+        }
+
+        // class alumno{
+        //     constructor(){
+        //         this.idalumno;
+        //         this.promedio;
+        //         this.grupo;
+        //         this.materias;
+        //         this.grado;
+        //         this.tutor;
+        //         this.taller;
+        //     }
+        // }
+
+        // class maestro{
+        //     constructor(){
+        //         this.grupo;
+        //         this.salon;
+        //         this.materias;
+        //         this.especialidad;
+        //    }
+        // }
+    </script>
+</head>
+<body>
+    <script>
+        alfredo = new persona("alfredo", "flores", "camacho");
+        document.write(alfredo.toString());
+    </script>
+</body>
+</html>
