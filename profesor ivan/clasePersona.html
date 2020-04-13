@@ -5,36 +5,156 @@
     <title>clase Persona</title>
     <script>
         class persona{
-            constructor(nombre, apellidoP, apellidoM){
-                this.nombre=nombre;
-                this.apellidoP=apellidoP;
-                this.apellidoM=apellidoM;
-                this.sexo;
-                this.fechaNacimiento;
-                this.nacionalidad;
-                this.domicilio;
-                //calle,numero,numero interior, colonia, cp, ciudad, estado, pais
-                this.email;
-                this.telefono;
-                //tipo, numero
+            constructor(nombre,apP,apM,sexo,fechaN,nacio,dom,calle,numExt,numInt,colonia,cp,ciudad,estado,pais,email,telefono,tipo,numTel){
+                this._nombre=nombre;
+                this._apPaterno=apP;
+                this._apMaterno=apM;
+                this._sexo=sexo;
+                this._fechaNacimiento = fechaN;
+                this._nacionalidad=nacio;
+                this._domicilio=dom;
+                    this._calle=calle;
+                    this._numeroExterios=numExt;
+                    this._numerointerior=numInt;
+                    this._colonia=colonia;
+                    this._codigoPostal=cp;
+                    this._ciudad=ciudad;
+                    this._estado=estado;
+                    this._pais=pais;
+                this._email=email;
+                this._telefono=telefono;
+                    this._tipo=tipo
+                    this._numeroTelefono=numTel;
+            }
+
+            get Nombre(){
+                return this._nombre;
+            }
+
+            get apPaterno(){
+                return this._apPaterno;
+            }
+
+            get apMaterno(){
+                return this._apMaterno;
+            }
+
+            get Genero(){
+                return this._sexo;
+            }
+
+            get fechaNacimiento(){
+                return this._fechaNacimiento;
+            }
+
+            get Nacionalidad(){
+                return this._nacionalidad;
+            }
+
+            get Domicilio(){
+                return this._domicilio;
+            }
+
+            get Calle(){
+                return this._calle;
+            }
+
+            get numExterior(){
+                return this._numeroExterios;
+            }
+
+            get numInterior(){
+                return this._numerointerior;
+            }
+
+            get Colonia(){
+                return this._colonia;
+            }
+
+            get codigoPostal(){
+                return this._codigoPostal;
+            }
+
+            get Ciudad(){
+                return this._ciudad;
+            }
+
+            get Estado(){
+                return this._estado;
+            }
+
+            get Pais(){
+                return this._pais;
+            }
+
+            get Email(){
+                return this._email;
+            }
+
+            get Telefono(){
+                return this._telefono;
+            }
+
+            get Tipo(){
+                return this._tipo;
+            }
+
+            get numeroTelefono(){
+                return this._numeroTelefono;
             }
 
             toString(){
-                return 'me llamo: ' + this.nombre + ' ' + this.apellidoP + ' ' + this.apellidoM; 
+                return 'me llamo: ' + this.Nombre + ' ' + this.apPaterno + ' ' + this.apMaterno; 
             }
         }
 
-        // class alumno{
-        //     constructor(){
-        //         this.idalumno;
-        //         this.promedio;
-        //         this.grupo;
-        //         this.materias;
-        //         this.grado;
-        //         this.tutor;
-        //         this.taller;
-        //     }
-        // }
+        class estudiante extends persona{
+             constructor(nombre,apP,apM,idA,tut,prom,grupo,mate,grado,taller){
+                super(nombre,apP,apM);
+                this._idalumno=idA;
+                this._tutor=tut;
+                this._promedio=prom;
+                this._grupo=grupo;
+                this._materias=mate;
+                this._grado=grado;
+                this._taller=taller;
+            }
+
+            get idAlumno(){
+                return this._idalumno;
+            }
+
+            get Tutor(){
+                return this._tutor;
+            }
+
+            get Promedio(){
+                return this._promedio;
+            }
+
+            get Grupo(){
+                return this._grupo;
+            }
+
+            get Materias(){
+                return this._materias;
+            }
+
+            get Grado(){
+                return this._grado;
+            }
+
+            get Taller(){
+                return this._taller;
+            }
+            toString(muestraTutor){
+                let msg = 'Matricula: ' + this.idAlumno + ' ' + this.Nombre + ' ' + this.apPaterno + ' ' + this.apMaterno;
+                if(muestraTutor){
+                    msg += ', mi tutor es: ' + this.Tutor.Nombre + ' ' + this.Tutor.apPaterno + ' ' + this.Tutor.apMaterno;
+                }
+                return msg;
+            }
+        }
 
         // class maestro{
         //     constructor(){
@@ -49,7 +169,10 @@
 <body>
     <script>
         alfredo = new persona("alfredo", "flores", "camacho");
-        document.write(alfredo.toString());
+        document.write(alfredo.toString()+"<br>");
+        est1 = new estudiante('juan','perez','torres',1010,alfredo);
+        document.write(est1.toString()+'<br>');
+        document.write(est1.toString(true)+'<br>');
     </script>
 </body>
 </html>
