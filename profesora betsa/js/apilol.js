@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var divText = document.getElementById('card-first-content');
     
-    fetch('https://ddragon.leagueoflegends.com/cdn/10.6.1/data/es_MX/champion.json')
+    fetch('http://api.imagendigital.com/v2/cocinadelirante/node.json/339fd1e0444ddbbd4d4528d8df161108?taxonomy.tid=13&type=receta')
     .then(function(respuesta) {
         return respuesta.json();
     })
     .then(function(miJeison) {
-        divText.innerHTML = "<h2>" + miJeison.data["Pantheon"].id + "</h2><p>"+miJeison.data["Pantheon"].blurb+"</p>";
-    })
-        
+        divText.innerHTML = `<img src='${miJeison.data[0].image.styles.square_circle}'/>
+                             <h1> ${miJeison.data[0].author.name} </h1>`;
+    })  
 });
+
   
 
 var personaje = [
